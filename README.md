@@ -22,6 +22,10 @@ Installiere `qemu-user-static`
 - Ubuntu: `apt-get update`, `apt-get install qemu-user-static`
 - ArchLinux: Aus dem AUR qemu-user-static oder qemu-user-static-bin
 
+Installiere arm embedded toolchain
+- Ubuntu: `apt-get install gcc-arm-none-eabi`
+- ArchLinux: `pacman -S arm-none-eabi-gcc arm-none-eabi-gdb`
+
 ### Helfer-Skripte
 Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `run.sh` in den workspace Ordner. Die Skripte sind ziemlich simpel und rufen im Prinzip nur den Compiler auf. `run.sh` macht etwas mehr und ruft zusätzlich qemu und gdb (den debugger) auf.
 

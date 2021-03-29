@@ -27,11 +27,12 @@ Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `r
 
 ## Benutzung
 
+Schreibe deinen Code in jedem möglichen Editor, beispielsweise VS Code oder Eclipse. Speicher und lass es mit run.sh laufen.
 
 ### assemble.sh und run.sh
 
-Rufe beide Dateien aus dem Aufgaben Ordner heraus auf mit der assembler Datei (.S)  die du bauen und laufen lassen willst.
-Beispiel: `./run.sh Aufgabe1_1.S`
+Rufe das Skript mit der Datei auf die assemblen oder laufen lassen willst.
+Beispiel: `./run.sh Aufgabe1/Aufgabe1_1.S`
 
 assemble.sh baut die Datei und gibt dir 2 zusätzliche Dateien aus: `Aufgabe1_1.o` und `Aufgabe1_1`
 

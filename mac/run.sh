@@ -3,15 +3,11 @@ CPU="arm7tdmi-s"
 QEMU_CPU="arm926"
 ENTRY="_startup"
 NAME="$(basename $1 .S)"
+OUTPUT="build"
 
-if [ ! -f "$NAME.S" ]; then
-	echo "File $NAME.S not found"
-	exit 1
-fi
+./assemble.sh $1
 
-arm-none-eabi-as $NAME.S -g -mcpu="$CPU" -o $NAME.o
-arm-none-eabi-ld $NAME.o -entry="$ENTRY" -o $NAME
-qemu-system-arm -s -S -machine virt -kernel $NAME -nographic &
+qemu-system-arm -s -S -machine virt -kernel "$OUTPUT/$NAME" -nographic &
 QEMU_PID=$!
 
 echo "QEMU runs with PID $QEMU_PID"

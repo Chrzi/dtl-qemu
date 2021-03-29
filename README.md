@@ -22,13 +22,11 @@ Installiere `qemu-user-static`
 - Ubuntu: `apt-get update`, `apt-get install qemu-user-static`
 - ArchLinux: Aus dem AUR qemu-user-static oder qemu-user-static-bin
 
+### Helfer-Skripte
+Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `run.sh` in den Aufgaben Ordner. Die Skripte sind ziemlich simpel
+
 ## Benutzung
 
-Kopiere die assemble.sh und run.sh aus dem für dich passenden Ordner dieses Projekts in den Aufgaben Ordner hinein.
-
-Mach die Dateien ausführbar:
-- `chmod +x assemble.sh`
-- `chmod +x run.sh`
 
 ### assemble.sh und run.sh
 

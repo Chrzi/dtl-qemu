@@ -2,7 +2,7 @@
 NAME="$(basename $1 .S)"
 CPU="arm7tdmi-s"
 ENTRY="_startup"
-OUTPUT="build"
+OUTPUT="$(dirname "$0")/build"
 
 if [ ! -f "$1" ]; then
         echo "File $1 not found"

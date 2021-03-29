@@ -3,7 +3,7 @@ CPU="arm7tdmi-s"
 QEMU_CPU="arm926"
 ENTRY="_startup"
 NAME="$(basename $1 .S)"
-OUTPUT="build"
+OUTPUT="$(dirname "$0")build"
 
 ./assemble.sh $1
 

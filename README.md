@@ -34,7 +34,7 @@ Schreibe deinen Code in jedem möglichen Editor, beispielsweise VS Code oder Ecl
 Rufe das Skript mit der Datei auf die assemblen oder laufen lassen willst.
 Beispiel: `./run.sh Aufgabe1/Aufgabe1_1.S`
 
-assemble.sh baut die Datei und gibt dir 2 zusätzliche Dateien aus: `Aufgabe1_1.o` und `Aufgabe1_1`
+assemble.sh baut die Datei und schreibt die Ausgabe in den Ordner "build" im workspace. Die Datei ohne Endung ist die lauffähige Binary (.elf auf Windows)
 
 run.sh assembled, startet qemu und anschließend den CLI Debugger.
 

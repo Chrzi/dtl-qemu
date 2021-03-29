@@ -23,7 +23,7 @@ Installiere `qemu-user-static`
 - ArchLinux: Aus dem AUR qemu-user-static oder qemu-user-static-bin
 
 ### Helfer-Skripte
-Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `run.sh` in den Aufgaben Ordner. Die Skripte sind ziemlich simpel und rufen im Prinzip nur den Compiler auf. `run.sh` macht etwas mehr und ruft zusätzlich qemu und gdb (den debugger) auf.
+Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `run.sh` in den workspace Ordner. Die Skripte sind ziemlich simpel und rufen im Prinzip nur den Compiler auf. `run.sh` macht etwas mehr und ruft zusätzlich qemu und gdb (den debugger) auf.
 
 ## Benutzung
 

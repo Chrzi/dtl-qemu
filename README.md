@@ -46,7 +46,8 @@ run.sh assembled, startet qemu und anschließend den CLI Debugger.
 
 `run.sh` ruft gdb auf und attached ihn gleich an qemu. gdb hat ein 3 Zeilen Layout, oben die Register, mittig der Code und unten ein Eingabefenster
 
-- `n`/`next` springt ihr zeilenweise durchs Programm
+- `n`/`next` führt die aktuelle Anweisung aus, "step over", `bl` ist ein Befehl und man springt nicht "hinein"
+- `s`/`step` führt zeilenweise aus, "step into", folgt `bl`
 - `c`/`continue` lässt das Programm bis zum nächsten Breakpoint laufen oder bis das Programm mit Ctrl-C unterbrochen wird
 - `b <Zeile/Label>`/`break <Zeile/Label>` setzt einen Breakpoint an die gegebene Zeile oder an Label. Beispiel `b loop`
 - `q`/`quit` beendet den Debugger und dabei wird der debuggte Prozess (qemu) ebenfalls beendet, was er sich bestätigen lässt.

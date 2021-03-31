@@ -6,6 +6,10 @@ Mit QEMU aber ist es auch möglich die meisten Aufgaben direkt auf dem PC zu deb
 
 Kenntnis des Terminals vorrausgesetzt.
 
+## Issues
+
+- Benuten des Stacks funktioniert nicht, da das Speicherlayout unterschiedlich ist.
+
 ## Installation
 
 Es wird benötigt QEMU-ARM und die GNU ARM Crosscompile Toolchain

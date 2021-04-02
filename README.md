@@ -23,7 +23,7 @@ Installiere `qemu-system-arm`
 - ArchLinux: `pacman -S qemu-arch-extra`
 
 Installiere arm embedded toolchain
-- Ubuntu: `apt-get install gcc-arm-none-eabi`
+- Ubuntu: `apt-get install gcc-arm-none-eabi gdb-multiarch`
 - ArchLinux: `pacman -S arm-none-eabi-gcc arm-none-eabi-gdb`
 
 ### Helfer-Skripte

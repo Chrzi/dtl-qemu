@@ -22,9 +22,9 @@ Es wird benötigt QEMU-ARM und die GNU ARM Crosscompile Toolchain
 
 ### Linux
 
-Installiere `qemu-user-static`
-- Ubuntu: `apt-get update`, `apt-get install qemu-user-static`
-- ArchLinux: Aus dem AUR qemu-user-static oder qemu-user-static-bin
+Installiere `qemu-system-arm`
+- Ubuntu: `apt-get update`, `apt-get install qemu-system-arm`
+- ArchLinux: `pacman -S qemu-arch-extra`
 
 Installiere arm embedded toolchain
 - Ubuntu: `apt-get install gcc-arm-none-eabi`
@@ -45,6 +45,14 @@ Beispiel: `./run.sh Aufgabe1/Aufgabe1_1.S`
 assemble.sh baut die Datei und schreibt die Ausgabe in den Ordner "build" im workspace. Die Datei ohne Endung ist die lauffähige Binary (.elf auf Windows)
 
 run.sh assembled, startet qemu und anschließend den CLI Debugger.
+
+#### Stack Pointer
+
+Da QEMU nicht genau exakt die CPU und Board aus dem Labor emuliert, benutzen die Skripte eine ähnliche CPU.
+Diese hat aber eine andere Memory-Map. Was heißt das? Im Prinzip nur dass der RAM an einer anderen Adresse liegt.
+
+Mit der Option `-m` wird die initale Stack-Pointer Adresse `0x40001000` durch die für QEMU passende `0x04001000` ersetzt.
+Dies geschieht beim assemblen und nicht in der Original Datei, ihr könnt sie also sorgenlos abgegeben.
 
 ### gdb - Debugger 
 

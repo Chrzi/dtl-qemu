@@ -27,7 +27,7 @@ Installiere arm embedded toolchain
 - ArchLinux: `pacman -S arm-none-eabi-gcc arm-none-eabi-gdb`
 
 ### Helfer-Skripte
-Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `run.sh` in den workspace Ordner. Die Skripte sind ziemlich simpel und rufen im Prinzip nur den Compiler auf. `run.sh` macht etwas mehr und ruft zusätzlich qemu und gdb (den debugger) auf.
+Lade das Repository herunter und kopiere die beiden Skripte `assemble.sh` und `run.sh` in den workspace Ordner. Die Skripte sollen euch etwas Arbeit abnehmen und das assemblen und starten des Debuggers beschleunigen. Der Output der Skripte ist standardmäßig im `workspace/build`.
 
 ## Benutzung
 

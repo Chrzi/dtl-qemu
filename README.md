@@ -6,10 +6,6 @@ Mit QEMU aber ist es auch möglich die meisten Aufgaben direkt auf dem PC zu deb
 
 Kenntnis des Terminals vorrausgesetzt.
 
-## Issues
-
-- Benuten des Stacks funktioniert nicht, da das Speicherlayout unterschiedlich ist.
-
 ## Installation
 
 Es wird benötigt QEMU-ARM und die GNU ARM Crosscompile Toolchain
@@ -53,6 +49,7 @@ Diese hat aber eine andere Memory-Map. Was heißt das? Im Prinzip nur dass der R
 
 Mit der Option `-m` wird die initale Stack-Pointer Adresse `0x40001000` durch die für QEMU passende `0x04001000` ersetzt.
 Dies geschieht beim assemblen und nicht in der Original Datei, ihr könnt sie also sorgenlos abgegeben.
+Die Option ist bei Aufgabe 3 und Aufgabe 4 relevant.
 
 ### gdb - Debugger 
 

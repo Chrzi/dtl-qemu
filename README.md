@@ -47,15 +47,15 @@ run.sh assembled, startet qemu und anschließend den CLI Debugger.
 Da QEMU nicht genau exakt die CPU und Board aus dem Labor emuliert, benutzen die Skripte eine ähnliche CPU.
 Diese hat aber eine andere Memory-Map. Was heißt das? Im Prinzip nur dass der RAM an einer anderen Adresse liegt.
 
-Mit der Option `-m` wird die initale Stack-Pointer Adresse `0x40001000` durch die für QEMU passende `0x04001000` ersetzt.
-Dies geschieht beim assemblen und nicht in der Original Datei, ihr könnt sie also sorgenlos abgegeben.
-Die Option ist bei Aufgabe 3 und Aufgabe 4 relevant.
+Standardmäßig wird die initale Stack-Pointer Adresse `0x40001000` durch die für die QEMU-CPU passende Adresse `0x04001000` ersetzt.
+Dies geschieht beim assemblen und nicht in der Original Datei, sie kann also normal abgegeben werden.
+Mit der Option `-m` kann dies ausgeschaltet werden
 
 ### gdb - Debugger 
 
 `run.sh` ruft gdb auf und attached ihn gleich an qemu. gdb hat ein 3 Zeilen Layout, oben die Register, mittig der Code und unten ein Eingabefenster
 
-- `n`/`next` führt die aktuelle Anweisung aus, "step over", `bl` ist ein Befehl und man springt nicht "hinein"
+- `n`/`next` führt die aktuelle Anweisung aus, "step over", `bl` ist ein Befehl und man springt nicht "hinein" (step-over)
 - `s`/`step` führt zeilenweise aus, "step into", folgt `bl`
 - `c`/`continue` lässt das Programm bis zum nächsten Breakpoint laufen oder bis das Programm mit Ctrl-C unterbrochen wird
 - `b <Zeile/Label>`/`break <Zeile/Label>` setzt einen Breakpoint an die gegebene Zeile oder an Label. Beispiel `b loop`

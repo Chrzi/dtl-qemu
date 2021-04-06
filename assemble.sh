@@ -2,7 +2,7 @@
 CPU="arm7tdmi-s"
 ENTRY="_startup"
 OUTPUT="$(dirname $0)/build"
-MAP=0
+MAP=1
 #On ARMadillo RAM starts at 0x40000000, stack at this address
 MAPSOURCE="0x40001000"
 #On arm926ej-s (QEMU_CPU) onboard SDRAM is 64MB at 0x04000000-0x07FFFFFF
@@ -14,7 +14,7 @@ function usage {
 Usage: assemble.sh [-hm] [-o OUTDIR] Aufgabe.S
 
 -h: Shows this help
--m: Map memory from 0x40001000 to RAM address of the QEMU CPU
+-m: Disables mapping memory from 0x40001000 to RAM address of the QEMU CPU
 -o: Change the output directory
 
 EOF
@@ -27,7 +27,7 @@ while getopts "hmo:" opt; do
 			exit 0
 			;;
 		m) 
-			MAP=1
+			MAP=0
 			;;
 		o)
 			if [ ! -d "$OPTARG" ]; then

@@ -1,4 +1,4 @@
-# Digitaltechnik Labor mit QEMU als Emulator auf Linux und Mac
+# Digitallabor mit QEMU als Emulator auf Linux und Mac
 
 Die bereitgestellte Umgebung des Digitallabor stellt einen Emulator für Windows bereit. Für MacOS und Linux besteht die Möglichkeit alle Aufgaben direkt auf der Platine laufen zu lassen.
 
